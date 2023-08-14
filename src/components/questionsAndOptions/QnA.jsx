@@ -1,18 +1,44 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./QnA.css"
 import { useQuiz } from '../context/quiz-context';
+import { useNavigate } from 'react-router-dom';
 const QnA = ({quizData}) => {
-    
+    const navigate = useNavigate();
     const [ currentQuiz] = quizData;
     const {title , quiz} = currentQuiz;
-    const {index, score, quizDispatch} = useQuiz() 
+    const {index, score, quizDispatch, selectedOption} = useQuiz()
 
     const handleNextQuestionClick = ()=> {
-        // localStorage.setItem("index", index+1);
+        localStorage.setItem("index", index+1);
+        if(index !== quiz.length-1){
+            quizDispatch({
+                type: "NEXT_QUESTION"
+            })
+        }else{
+            quizDispatch({
+                type: "SUBMIT"
+            })
+            navigate("/result")
+        }
+     
+    }
+    const handleAnswerClick = (optionId, isCorrect)=> {
         quizDispatch({
-            type: "NEXT_QUESTION"
+            type: "SET_SELECTED_OPTION",
+            payload: {optionId, isCorrect}
         })
     }
+    const handleQuitClick = ()=> {
+        quizDispatch({
+            type:"QUIT",
+
+        })
+        navigate("/")
+    }
+    useEffect(()=> {
+        localStorage.setItem("option", selectedOption)
+        localStorage.setItem("score", score)
+    },[selectedOption])
   return (
     <main className="d-flex justify-center qns-main">
     <section className="question-dialog container-flex">
@@ -29,13 +55,13 @@ const QnA = ({quizData}) => {
         <div className="options-box">
          {
          quiz[index].options.map(({id, option, isCorrect})=> 
-         <button key={id} className="button option d-flex justify-center">{option}</button>
+         <button key={id} className= {`button option d-flex justify-center ${selectedOption && isCorrect ? "success" : ""} ${selectedOption=== id && !isCorrect ? "error" : ""}`} onClick={()=>handleAnswerClick(id, isCorrect)}>{option}</button>
          )
          }
         </div>
         <div className="nxt-btn-container">
             <div className="d-flex gap">
-                <button className="play-btn button btn-secondary cursor" >Quit</button>
+                <button className="play-btn button btn-secondary cursor" onClick={handleQuitClick}>Quit</button>
                 <button className="nxt-qstn play-now-btn button btn-primary cursor" onClick={handleNextQuestionClick}>{index=== quiz.length-1 ? "Submit" : "Next Question"}</button>
             </div>
         </div>

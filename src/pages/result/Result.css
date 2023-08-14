@@ -1,0 +1,8 @@
+.result-container{
+    height: 6rem;
+    width: 20rem;
+    border: 2px solid red;
+    margin: auto;
+    color: white;
+    background-color: grey;
+}

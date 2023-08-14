@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar'
 import axios from 'axios'
-import CategoryCard from '../../components/CategoryCard';
 import "./Home.css"
+import QuizCard from '../../components/quizCard/QuizCard';
 const Home = () => {
-    const [category, setCategory] = useState([]);
+    const [categories, setCategories] = useState([]);
     useEffect(()=>{
     (async ()=> {
         try {
             const {data: {data}} = await axios.get("https://express-sgam.onrender.com/category");
             console.log(data);
-             setCategory(data);
+             setCategories(data);
              
         } catch (error) {
           console.log(error);   
@@ -19,16 +19,16 @@ const Home = () => {
     }, [])
   return (
     <div>
-        <Navbar/>
-        <div className="category-card">
+        <Navbar route="home"/>
+        <main className="category-card">
             {
-                category.map((category)=> {
+                categories.map((category)=> {
                     return(
-                        <CategoryCard quiz={category} key={category.id}/>
+                        <QuizCard quizCategory={category} key={category.id}/>
                     )
                 })
             }
-        </div>
+        </main>
     </div>
   )
 }
