@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import axios from "axios"
 import Navbar from '../../components/Navbar'
 import QnA from '../../components/questionsAndOptions/QnA'
-import axios from 'axios'
+
 import { useQuiz } from '../../components/context/quiz-context'
 
 const QuizPage = () => {
