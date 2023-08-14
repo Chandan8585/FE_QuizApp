@@ -24,3 +24,8 @@ body {
   height: 5rem;
   width: 100%;
 }
+.loading{
+  color: white;
+  height: 10rem;
+  width: 60rem;
+}
