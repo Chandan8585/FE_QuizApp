@@ -4,10 +4,11 @@
   
   .question-dialog {
     width: 40vw;
-    color: var(--text-color-primary);
+    color: black;
     background-color: var(--primary-color);
     border-radius: 4px;
     padding: 1rem 2rem;
+    font-weight: bolder;
   }
   
   .qsn-title {
@@ -35,7 +36,7 @@
     margin: 1rem 0;
     padding: 1rem 0;
     background-color: var(--bg-color);
-    color: var(--text-color-primary);
+    color: white;
     border-radius: 2rem;
     width: 100%;
   }
@@ -51,6 +52,7 @@
   
   .nxt-qstn {
     width: max-content;
+    background-color: #40514E;
   }
   
   .success {
@@ -68,4 +70,6 @@
   .opacity {
     cursor: default;
   }
-  
+  .play-btn{
+    color: black;
+  }

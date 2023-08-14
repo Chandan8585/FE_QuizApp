@@ -34,7 +34,7 @@ const QuizCard = ({quizCategory}) => {
                   <p className="card-des">{description}</p>
                 </div>
                 <div className="cta-btn" onClick={handlePlayNowClick}>
-                  <button className="button btn-primary btn-icon cart-btn d-flex align-center justify-center gap cursor btn-margin">
+                  <button className="button play-btn btn-icon cart-btn d-flex align-center justify-center gap cursor btn-margin">
                     
                     Play Now
                   </button>

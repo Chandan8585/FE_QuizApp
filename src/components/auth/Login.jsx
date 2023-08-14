@@ -1,23 +1,47 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Auth.css"
-
+import { useNavigate } from 'react-router-dom';
+import { LoginHandler } from '../services/authService';
+import { useAuth } from '../context/authContext';
 
 const Login = () => {
-    const [userName , setUserName] = useState("");
-    const [password , setPassword] = useState("");
- const handleLoginClick= ()=> {
-     if(userName ==="" || password===""){
-        return "fill the required input" ;
-     }
+    const navigate = useNavigate();
+    const { userName, password, authDispatch } = useAuth();
+ const handleLoginClick= (event)=> {
+          event.preventDefault();
+          const token = LoginHandler(userName, password);
+          if(token){
+            navigate("/")
+          }
+          authDispatch({
+            type: "TOKEN",
+            payload: token
+          })
+          authDispatch({
+            type: "CLEAR_CREDENTIALS"
+          })
  }
  const handleUserNameChange = (event)=> {
-         setUserName(event.target.value);
+         authDispatch({
+            type: "USERNAME",
+            payload: event.target.value
+         })
  }
  const handlePasswordChange = (event)=> {
-    setPassword(event.target.value);
+         authDispatch({
+            type: "PASSWORD",
+            payload: event.target.value
+         })
  }
  const handleTestCredentialsClick = ()=> {
-
+      const token = LoginHandler("Chandan", "Password");
+      authDispatch({
+        type: "TOKEN",
+        payload: token
+      })
+      if(token){
+        navigate("/");
+      }
  }
   return (
     <div className="d-grid">
@@ -30,7 +54,7 @@ const Login = () => {
                 <label className="form-label">Username</label>
                 <input 
                 value={userName} 
-                className="form-input lh-ls" placeholder="prakashsakari" 
+                className="form-input-log lh-ls" placeholder="Chandan_Pratap8585" 
                 onChange={handleUserNameChange}
                 />
             </div>
@@ -38,7 +62,7 @@ const Login = () => {
                 <label className="form-label">Password</label>
                 <input 
                 value={password} 
-                className="form-input lh-ls" placeholder="*******" 
+                className="form-input-log lh-ls" placeholder="*******" 
                 onChange={handlePasswordChange}
                 />
             </div>
