@@ -11,6 +11,6 @@ export const Result = ()=> {
             <h2>{`Your Score is ${score}`}</h2>
         </div>
         </Fragment>
-      
+    //   check
     )
 }
