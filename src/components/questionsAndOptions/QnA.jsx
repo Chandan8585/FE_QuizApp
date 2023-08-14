@@ -1,0 +1,47 @@
+import React from 'react'
+import "./QnA.css"
+import { useQuiz } from '../context/quiz-context';
+const QnA = ({quizData}) => {
+    
+    const [ currentQuiz] = quizData;
+    const {title , quiz} = currentQuiz;
+    const {index, score, quizDispatch} = useQuiz() 
+
+    const handleNextQuestionClick = ()=> {
+        // localStorage.setItem("index", index+1);
+        quizDispatch({
+            type: "NEXT_QUESTION"
+        })
+    }
+  return (
+    <main className="d-flex justify-center qns-main">
+    <section className="question-dialog container-flex">
+        <h2 className="d-flex justify-center qns-title">
+  {title}
+        </h2>
+        <div className="qsn_scr">
+            <span>Question: {index+1}/{quiz?.length}</span>
+            <span className="score">Score: {score}</span>
+        </div>
+        <div className="question">
+            <span>Q{index+ 1}: {quiz[index]?.question}</span>
+        </div>
+        <div className="options-box">
+         {
+         quiz[index].options.map(({id, option, isCorrect})=> 
+         <button key={id} className="button option d-flex justify-center">{option}</button>
+         )
+         }
+        </div>
+        <div className="nxt-btn-container">
+            <div className="d-flex gap">
+                <button className="play-btn button btn-secondary cursor" >Quit</button>
+                <button className="nxt-qstn play-now-btn button btn-primary cursor" onClick={handleNextQuestionClick}>{index=== quiz.length-1 ? "Submit" : "Next Question"}</button>
+            </div>
+        </div>
+    </section>
+</main>
+  )
+}
+
+export default QnA
