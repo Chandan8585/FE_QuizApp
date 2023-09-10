@@ -1,0 +1,35 @@
+/* Assuming you want to apply these styles to the div with the combined class */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tutorial-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 1rem;
+    overflow-y: scroll;
+}
+
+.custom-container{
+    background-color: white;
+    width: 40%;
+    overflow-y: scroll;
+    margin-left: 4rem;
+    max-height: 80%;
+    border: 1px solid grey;
+}
+.custom-item{
+    
+    border-bottom: 1px solid grey;
+    margin-bottom: 1px;
+    cursor: pointer;
+    
+    height: 4rem;
+}
+.custom-item :active{
+    background-color: green;
+}

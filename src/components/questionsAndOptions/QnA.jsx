@@ -54,7 +54,7 @@ const QnA = ({quizData}) => {
         </div>
         <div className="options-box">
          {
-         quiz[index].options.map(({id, option, isCorrect})=> 
+         quiz && quiz[index].options.map(({id, option, isCorrect})=> 
          <button key={id} className= {`button option d-flex justify-center ${selectedOption && isCorrect ? "success" : ""} ${selectedOption=== id && !isCorrect ? "error" : ""}`} onClick={()=>handleAnswerClick(id, isCorrect)}>{option}</button>
          )
          }
