@@ -8,7 +8,8 @@ const Gallery = () => {
     const [description, setActiveDescription] = useState(
         "We will learn DFS of Graph in this problem"
     );
-    const arr = Data;
+    const arr = Data[0].tutorials;
+    
   return (
     <div className="tutorial-container">
 
@@ -16,21 +17,25 @@ const Gallery = () => {
         className="custom-container"
         style={{ height: "min(38vw, 650px)" }}
     >
-        <h3 className="">POTD-August</h3>
+        <h3 className="">{Data[0].heading}</h3>
         <p className="px-2"> GFG Practice</p>
         {arr.map((e) => {
             return (
                 <div
-                    className="custom-item"
+                    className={`custom-item ${e.select ? "select" : ""}`} 
                     onClick={() => {
                         setActiveVid(e.link);
                         setActiveTitle(e.title);
                         setActiveDescription(e.description);
+
                     }}
                 >
-                    {/* <img className="" src={e.img} /> */}
+                    <div className='item-detail'>
+                    <img className="" src={e.img} />
                     <p className="" >{e.title}</p>
-                    <p className="px-2">{e.description}</p>
+                    {/* <p className="px-2">{e.description}</p> */}
+                    </div>
+                    
                 </div>
             );
         })}

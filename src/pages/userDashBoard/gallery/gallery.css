@@ -7,29 +7,46 @@
 .tutorial-container{
     display: flex;
     flex-direction: row;
-    background-color: #fff;
+    background-color: #FA7020;
     width: 100vw;
     height: 100vh;
     padding-left: 1rem;
     overflow-y: scroll;
+
+    
+
 }
 
 .custom-container{
     background-color: white;
     width: 40%;
     overflow-y: scroll;
-    margin-left: 4rem;
-    max-height: 80%;
+    border-radius: 5px;
+    max-height: 70%;
     border: 1px solid grey;
+    margin: 1rem 0 10rem 5rem;
+
+
 }
-.custom-item{
-    
+.custom-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+  }
+.item-detail{
+    display: flex;
     border-bottom: 1px solid grey;
     margin-bottom: 1px;
+    padding: 1rem;
     cursor: pointer;
-    
-    height: 4rem;
+justify-content: space-between;
+align-items: center;
+    height: 6rem;
+}
+.item-detail img{
+    border-radius: 50%;
 }
 .custom-item :active{
     background-color: green;
+}
+.select {
+    background-color: red;
 }

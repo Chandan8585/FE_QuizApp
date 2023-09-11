@@ -12,7 +12,7 @@ const UserDashBoard = () => {
         <Outlet />
       </div>
       <aside className='sidebar'>
-        <Link to={"/user-dashboard/lecture"}>
+        <Link to={"/user-dashboard"}>
         <button  className='icon-button'>
         <span className="material-icons-outlined">
           video_library
@@ -21,7 +21,7 @@ const UserDashBoard = () => {
         </button>
        
         </Link>
-        <Link to={"/user-dashboard/quiz"}>
+        <Link to={"/quiz"}>
             <button className='icon-button'>
             <span className="material-icons-outlined">
         quiz

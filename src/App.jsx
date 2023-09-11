@@ -5,7 +5,8 @@ import Home from './pages/home/Home'
 import QuizPage from './pages/quiz/QuizPage'
 import { Result } from "./pages/result/Result";
 import UserDashBoard from "./pages/userDashBoard/UserDashBoard";
-import Gallery from "./pages/userDashBoard/gallery/Gallery";
+// import Gallery from "./pages/userDashBoard/gallery/Gallery";
+import UserDashboardRoutes from "./pages/userDashBoard/UserDashboardRoutes";
 
 function App() {
   return (
@@ -15,8 +16,7 @@ function App() {
         <Route path="/auth/login" element={<Login />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/user-dashboard" element={<UserDashBoard />}>
-          <Route path="quiz" element={<QuizPage />} />
-          <Route path="lecture" element={<Gallery />} />
+               <Route index element={<UserDashboardRoutes/>}/>
         </Route>  
         <Route path="/result" element={<Result />} />
       </Routes>

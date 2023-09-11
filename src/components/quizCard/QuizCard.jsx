@@ -16,8 +16,9 @@ const QuizCard = ({quizCategory}) => {
                 payload: category
             })
             localStorage.setItem("category", category);
-            navigate("/");
-            // navigate("/quiz")
+            // navigate("/");
+            
+            navigate("/user-dashboard");
           }else{
             navigate("/auth/login")
           }

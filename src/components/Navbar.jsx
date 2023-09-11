@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useQuiz } from "./context/quiz-context";
-
+import "./navbar.css"
 const Navbar = ({route}) => {
 
     const token = localStorage.getItem("token");
@@ -30,7 +30,7 @@ const Navbar = ({route}) => {
                 <img className="icon mr-1" src="../src/assets/logo.png" alt="logo" />
                 <h1 className="heading-title">
                     {
-                        route === "home" || route === "login" ? (<Link to="/" className="link">Quizonik</Link>) : "Quizify"
+                        route === "home" || route === "login" ? (<Link to="/" className="link">EduNest</Link>) : "Quizify"
                     }
                 </h1>
             </div>
