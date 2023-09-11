@@ -1,7 +1,7 @@
 @import url("https://uilight.netlify.app/main.css");
 
 :root {
-  --bg-color: #40514E;
+  --bg-color: #FA7020;;
   --primary-color: #E4F9F5;
   --secondary-color: #30E3CA;
   --accent-color: #3a3b89;
@@ -28,4 +28,8 @@ body {
   color: white;
   height: 10rem;
   width: 60rem;
+}
+.material-icons-outlined{
+  color: #FA7020;
+  background-color: #fff;
 }
