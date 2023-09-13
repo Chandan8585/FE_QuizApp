@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const CategoryCard = ({ quiz }) => {
   const {category, image, title, description } = quiz;
   const token = localStorage.getItem("token");
-  // const {quizDispatch} = useQuiz();
+  const {quizDispatch} = useQuiz();
   const navigate = useNavigate();
   const handlePlayNowClick = () => {
     if(token){

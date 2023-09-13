@@ -8,7 +8,7 @@ const UserDashBoard = () => {
     <div className="dashboard-container">
       <div>
         <Navbar />
-        {/* Use Outlet to render nested routes */}
+  
         <Outlet />
       </div>
       <aside className='sidebar'>
@@ -24,8 +24,8 @@ const UserDashBoard = () => {
         <Link to={"/quiz"}>
             <button className='icon-button'>
             <span className="material-icons-outlined">
-        quiz
-        </span>
+             quiz
+            </span>
           <span>Assesment</span>
             </button>
         

@@ -1,75 +1,62 @@
 // Data.js
 import { useDeferredValue } from "react";
 
-const Data = [ 
-{heading : "POTD",
+const Data = [
+{heading : "Javascript",
+ subHeading: "Javascript Lecture by Code With Harry",
 tutorials : [
-    {
-    img:
-"https://i.ytimg.com/vi/0PfTU9JI6Lg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBDx0FPXyl9asnEXeJeQRjcNOh6bQ",
-    link:
-"https://www.youtube.com/embed/0PfTU9JI6Lg?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 1",
-    description: "We will learn DFS of Graph in this problem",
+{
+    img: "https://img.youtube.com/vi/ER9SspLe4Hg/default.jpg",
+    link: "https://www.youtube.com/embed/ER9SspLe4Hg?si=HxwXRAKBvXAKr93s",
+    title: "Introduction to JavaScript + Setup | JavaScript Tutorial in Hindi #1",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry.",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/MxnpwpQA4I4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDtUunWidfJK9vnjZIBTg9AwWI6KA",
-    link:
-"https://www.youtube.com/embed/MxnpwpQA4I4?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 2",
-    description: "We will learn Shortest Source Path in this problem",
+    img: "https://img.youtube.com/vi/Q4p8vRQX8uY/default.jpg",
+    link:"https://www.youtube.com/embed/Q4p8vRQX8uY?si=o_9aBZBTzxTe8Hmw",
+    title: "Variables in JavaScript | JavaScript Tutorial in Hindi #2",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry.",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/OzWNBHxUYO0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCtPuRpTYFI24y71-DYiPaHcBmFfQ",
-    link:
-"https://www.youtube.com/embed/OzWNBHxUYO0?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 3",
-    description: "We will learn Shortest Path in this problem 3",
+    img:"https://img.youtube.com/vi/Icev9Oxf0WA/default.jpg",
+    link: "https://www.youtube.com/embed/Icev9Oxf0WA?si=2PqeHuVyDyRDMUUo",
+    title: "const, let and var in JavaScript | JavaScript Tutorial in Hindi #3",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/X05eictbWIg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC0L4vTEifv_Rd1g4uSmOERQB3BsQ",
-    link:
-"https://www.youtube.com/embed/X05eictbWIg?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 4",
-    description: "We will learn Reverse Stack in this problem",
+    img: "https://img.youtube.com/vi/qpU3WIqRz9I/default.jpg",
+    link: "https://www.youtube.com/embed/qpU3WIqRz9I?si=0SYSr_54Vd2Zvkeg",
+    title: "Primitives and Objects in JavaScript | JavaScript Tutorial in Hindi #4",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/T3sWA_ha1-w/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAB2JYkK6qTJFba5fUayiUyoyuNXg",
-    link:
-"https://www.youtube.com/embed/T3sWA_ha1-w?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 5",
-    description: "We will learn Chocolate Distribution in this problem",
+    img:"https://img.youtube.com/vi/vA-AAeqkpxM/default.jpg",
+        link:"https://www.youtube.com/embed/vA-AAeqkpxM?si=-bbQtF3r9t_5k-vM",
+    title: "JavaScript Chapter 1 - Practice Set | JavaScript Tutorial in Hindi #5",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/9SSIbuQPamk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAdV3kVTVr-htccC52e_j6ydhdJkA",
+    img: "https://img.youtube.com/vi/lsV8JQgSW1s/default.jpg",
     link:
-"https://www.youtube.com/embed/9SSIbuQPamk?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 6",
-    description: "We will learn String Permutation in this problem",
+"https://www.youtube.com/embed/lsV8JQgSW1s?si=G4AjVF9_POr-zmQ9",
+    title: "JavaScript Operators and Expressions | JavaScript Tutorial in Hindi #6",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/E5Fz4-ylZ3E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLALcFccFfnJhyjUqaqTs1ihK6sc9Q",
-    link:
-"https://www.youtube.com/embed/E5Fz4-ylZ3E?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 7",
-    description: "We will learn Solving Sudoku in this problem",
+    img: "https://img.youtube.com/vi/s5Lu4QTjeL0/default.jpg",
+    link: "https://www.youtube.com/embed/s5Lu4QTjeL0?si=mQb5cxxto-kxL98w",
+    title: "Conditional expressions in JavaScript | JavaScript Tutorial in Hindi #7",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry",
 select: false },
 {
-    img:
-"https://i.ytimg.com/vi/dz_tDiMo_eA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9tGVL8i8BzyQ4TT4DpcAxRNNTMA",
-    link:
-"https://www.youtube.com/embed/dz_tDiMo_eA?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ",
-    title: "GFG POTD 8",
-    description: "We will learn Fraction Pairs in this problem",
+    img: "https://img.youtube.com/vi/W77qmqrhCcA/default.jpg",
+    link: "https://www.youtube.com/embed/W77qmqrhCcA?si=wBxw3-ChvI_PpduM",
+    title: "JavaScript Chapter 2 - Practice Set on Operators and Conditionals | JavaScript Tutorial in Hindi #8",
+    description: "This Javascript tutorial in Hindi course is designed for beginners with an aim to take JavaScript/ES6 and its concepts to an advanced level. Master JavaScript with this course now and you will be able to create a website easily after watching this. This tutorial series is for all those people who want to build a career in the Web development industry",
 select: false } ]
 }
 	
-];
+]
+;
 
 export default Data;

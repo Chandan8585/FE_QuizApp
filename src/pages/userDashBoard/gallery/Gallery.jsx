@@ -1,52 +1,46 @@
-import React, { useState } from 'react'
-import Data from '../Data';
-import Video from '../video/Video';
-import "./gallery.css"
+import Data from "../Data";
+
+
+import React, { useEffect, useState } from 'react'
+import Video from "../video/Video";
+import { useLecture } from "../../../components/context/lectureContext";
+
 const Gallery = () => {
-    const [activeVid, setActiveVid] = useState("https://www.youtube.com/embed/0PfTU9JI6Lg?list=PLM68oyaqFM7TCNz4d5J_hxfFg8w41jTYJ")
-    const [activeTitle, setActiveTitle] = useState("GFG POTD 1")
-    const [description, setActiveDescription] = useState(
-        "We will learn DFS of Graph in this problem"
-    );
     const arr = Data[0].tutorials;
-    
+    const {lecture,lectureDispatch} = useLecture();
+    const [tutorialData, setTutorialData] = useState(arr);
+    const [selectedLink ,setSelectedLink] = useState("");
+   
+    useEffect(()=> {
+        const arr = Data[0].tutorials;
+        // lectureDispatch({
+        //     type: "SET_LECTURES",
+        //     payload: arr
+        // })
+        setTutorialData(arr);
+    },[]);
+   
+   const handleTutorialData = (link)=> {
+    setSelectedLink(link);
+   }
   return (
-    <div className="tutorial-container">
-
-    <div
-        className="custom-container"
-        style={{ height: "min(38vw, 650px)" }}
-    >
-        <h3 className="">{Data[0].heading}</h3>
-        <p className="px-2"> GFG Practice</p>
-        {arr.map((e) => {
+    <div>
+    {
+        tutorialData.map((tutorial)=> {
             return (
-                <div
-                    className={`custom-item ${e.select ? "select" : ""}`} 
-                    onClick={() => {
-                        setActiveVid(e.link);
-                        setActiveTitle(e.title);
-                        setActiveDescription(e.description);
+                   <div onClick={()=> handleTutorialData(tutorial.link)}>
+                    <p>{tutorial.title}</p>
+                   </div>
+            )
+        })
 
-                    }}
-                >
-                    <div className='item-detail'>
-                    <img className="" src={e.img} />
-                    <p className="" >{e.title}</p>
-                    {/* <p className="px-2">{e.description}</p> */}
-                    </div>
-                    
-                </div>
-            );
-        })}
-    </div>
-    <Video 
-        link={activeVid}
-        title={activeTitle}
-        description={description}
-    />
-</div>
+    }{
+    <Video link={selectedLink}/>
+    }
+   </div>
   )
 }
 
 export default Gallery
+
+

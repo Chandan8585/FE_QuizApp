@@ -7,7 +7,8 @@
 .tutorial-container{
     display: flex;
     flex-direction: row;
-    background-color: #FA7020;
+    /* background-color: #FA7020; */
+    background-color: burlywood;
     width: 100vw;
     height: 100vh;
     padding-left: 1rem;
@@ -45,8 +46,13 @@ align-items: center;
     border-radius: 50%;
 }
 .custom-item :active{
-    background-color: green;
+    background-color: burlywood;
 }
 .select {
     background-color: red;
+}
+
+.heading{
+    font-size: large;
+    color: black;
 }

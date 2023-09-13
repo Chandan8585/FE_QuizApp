@@ -9,7 +9,7 @@ const Home = () => {
     useEffect(()=>{
     (async ()=> {
         try {
-            const {data: {data}} = await axios.get("https://express-sgam.onrender.com/category");
+            const {data: {data}} = await axios.get("https://fair-pink-angler-cape.cyclic.app/category");
             console.log(data);
              setCategories(data);
              setLoading(false)
@@ -26,7 +26,7 @@ const Home = () => {
         <main className="category-card">
             {
                loading ? (
-                <h1 className='loading'>Loading... this can take upto 10 seconds so please be pateint and refresh in between</h1>
+                <h1 className='loading'>Loading... this can take upto 1 minute when rendering 1st time</h1>
                ): (
                categories.map((category)=> {
                     return(

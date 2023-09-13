@@ -11,7 +11,7 @@ console.log(quizCategory);
     useEffect(() => {
         (async () => {
             try {
-                const { data: { data }, } = await axios.get("https://express-sgam.onrender.com/quiz"
+                const { data: { data }, } = await axios.get("https://fair-pink-angler-cape.cyclic.app/quiz"
                 ,{
                     headers: {authorization : localStorage.getItem("token")}
                 });
@@ -27,9 +27,7 @@ console.log(quizCategory);
                     localStorage.setItem("quiz", JSON.stringify(filteredData));
                 }
 
-                // console.log(filteredData)
-              
-                // setQuiz(filteredData);
+                
             }
              catch (error) {
                 console.log(error);
