@@ -7,9 +7,11 @@ import { useAuth } from '../context/authContext';
 const Login = () => {
     const navigate = useNavigate();
     const { userName, password, authDispatch } = useAuth();
+    console.log("username",userName, password, authDispatch );
  const handleLoginClick= (event)=> {
           event.preventDefault();
           const token = LoginHandler(userName, password);
+          console.log("token", token);
           if(token){
             navigate("/")
           }

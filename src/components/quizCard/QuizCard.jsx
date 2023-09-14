@@ -25,7 +25,7 @@ const QuizCard = ({quizCategory}) => {
         }
         return (
       
-            <div className="card card-vertical d-flex direction-column relative shadow">
+            <div className=" quiz-card card card-vertical d-flex direction-column relative shadow">
               <div className="card-image-container">
                 <img className="card-image" src={`${image}`} />
               </div>

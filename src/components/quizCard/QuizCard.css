@@ -2,3 +2,13 @@
     background-color: #40514E;
     color: white !important;
 }
+
+.quiz-card{
+    object-fit: contain;
+    height: 70vh;
+    
+}
+.card-image-container{
+    height: 40%;
+    border: 2px solid grey;
+}
