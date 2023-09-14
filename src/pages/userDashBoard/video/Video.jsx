@@ -1,13 +1,16 @@
 import React from 'react';
 import "./video.css"
-export default function Video(props) {
+import { useLecture } from '../../../components/context/lectureContext';
+export default function Video() {
+    const {link, title, description} = useLecture();
+    console.log("link ", title, description);
     return (
         <div className="video-container">
             <div className="video-content">
-                <iframe src={props.link} className="video-iframe"></iframe>
+                <iframe src={link} className="video-iframe"></iframe>
                 <div className="video-details">
-                    <div className="video-title">Title: {props.title}</div>
-                    <p className="video-description">Description: {props.description}</p>
+                    <div className="video-title">Title: {title}</div>
+                    <p className="video-description">Description: {description}</p>
                 </div>
             </div>
         </div>
