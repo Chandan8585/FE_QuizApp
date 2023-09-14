@@ -17,7 +17,7 @@ overflow-y: scroll;
 
 /* Assuming you want to apply these styles to the inner div */
 .video-content {
-    width: 130vw; /* w-full */
+    width: 70vw; /* w-full */
     height: 80% ;/* h-2/3 */
     /* margin-left: 11rem;  */
     /* margin-top: 1rem;  */
@@ -42,17 +42,20 @@ overflow-y: scroll;
     height: 16.666667%; /* h-1/3 */
     text-align: left; /* text-left */
     font-size: 1.5rem; /* text-xl */
-    color:  white; /* text-slate-600 */
+    color:  black; /* text-slate-600 */
 
 }
 
 /* Assuming you want to apply these styles to the title */
 .video-title {
     font-weight: 600;
+    color: black;
+    
 }
 
 /* Assuming you want to apply these styles to the description */
 .video-description {
     font-size: 1.25rem; /* text-lg */
     padding-top: 0.5rem; /* pt-2 */
+    color: black;
 }

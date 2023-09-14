@@ -80,3 +80,80 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Assuming you want to apply these styles to the div with the combined class */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tutorial-container{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #FA7020; */
+    background-color: burlywood;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 1rem;
+    overflow-y: scroll;
+}
+
+.custom-container{
+    background-color: white;
+    width: 40%;
+    overflow-y: scroll;
+    border-radius: 5px;
+    max-height: 70%;
+    border: 1px solid grey;
+    margin: 1rem 0 10rem 5rem;
+
+
+}
+.custom-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+  }
+.item-detail{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    margin-bottom: 1px;
+    padding: 1rem;
+    cursor: pointer;
+justify-content: space-between;
+align-items: center;
+    /* height: 6rem; */
+}
+.item-detail img{
+    border-radius: 50%;
+}
+.custom-item :active{
+    background-color: burlywood;
+}
+.select {
+    background-color: red;
+}
+
+.heading{
+    font-size: large;
+    color: black;
+}
+
+.tutorial-container{
+    height: 50vh;
+    width: 50vh;
+    overflow-x: scroll;
+}

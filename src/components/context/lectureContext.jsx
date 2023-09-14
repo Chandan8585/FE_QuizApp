@@ -8,14 +8,15 @@ const initialState = {
     image: "",
     description: "",
     select: false,
+    lectureCategory : ""
 }
 
 const LectureContext = createContext();
 
 const LectureProvider = ({children})=> {
-    const [{lecture, link, image, description, select} , lectureDispatch] = useReducer(lectureReducer, initialState);
+    const [{lecture, link, image, description, lectureCategory, select} , lectureDispatch] = useReducer(lectureReducer, initialState);
     return(
-        <LectureContext.Provider value={{lecture, link, image, description, select,lectureDispatch}}>
+        <LectureContext.Provider value={{lecture,  lectureCategory, link, image, description, select,lectureDispatch}}>
           {children}
         </LectureContext.Provider>
     )
