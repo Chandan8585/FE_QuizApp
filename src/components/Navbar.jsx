@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useQuiz } from "./context/quiz-context";
 import "./navbar.css"
+import SearchBar from "./searchBar/SearchBar";
 const Navbar = ({route}) => {
 
     const token = localStorage.getItem("token");
@@ -36,13 +37,17 @@ const Navbar = ({route}) => {
             </div>
             <nav className="navigation">
                 <ul className="list-non-bullet">
-                    {
-                        route === "home" && (
+                    <div className="d-flex align-center search-bar-container">
+                    {   route === "home" && <SearchBar/> }
+                      {  route === "home" && (
+                            
                             <li className="list-item-inline">
+                              
                                 <Link to="/auth/login" className="link cursor" onClick={handleAuthClick}> {token ? "Logout": "Login"} </Link>
                             </li>
                         )
                     }
+                    </div>
                     {
                         route === "result" && (
                             <Fragment>

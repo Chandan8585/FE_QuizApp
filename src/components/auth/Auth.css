@@ -1,7 +1,11 @@
 .d-grid {
-    margin: 7rem 0 1rem 0;
+    /* margin: 7rem 0 1rem 0; */
     display: grid;
     place-content: center center;
+    overflow-y: scroll;
+     height: fit-content;
+     position: relative;
+     bottom: 1rem;
 }
 
 .login-auth {
@@ -25,7 +29,7 @@
   font-size: 1rem;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
-  color: var(--primary-color);
+  color: black;
   border: 2px solid red;
 }
 
@@ -36,11 +40,12 @@
 .form-label {
   padding: 0;
   text-decoration: none;
-  color: var(--text-color-primary);
+  color: black;
 }
 
 .form-container {
   margin: 1rem 0;
+  color: black;
 }
 
 .label-remember {
@@ -131,4 +136,9 @@
   color: var(--background-color);
   background-color: var(--bg-color);
   cursor: pointer;
+}
+
+
+.singup-page{
+  height: 1000px;
 }

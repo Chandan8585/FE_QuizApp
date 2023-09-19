@@ -3,32 +3,48 @@ import Navbar from '../../components/Navbar'
 import axios from 'axios'
 import "./Home.css"
 import QuizCard from '../../components/quizCard/QuizCard';
+import SideBar from './SideBar';
+import { getFilterByCategory } from '../../../utils/filter-category';
+import { useFilter } from '../../components/context/filterContext';
+import { getSearchedResults } from '../../../utils/search-results';
+
 const Home = () => {
     const [loading, setLoading] = useState(true);
     const [categories, setCategories] = useState([]);
+    const {category, search} = useFilter();
     useEffect(()=>{
     (async ()=> {
         try {
-            const {data: {data}} = await axios.get("https://fair-pink-angler-cape.cyclic.app/category");
-            console.log(data);
+          
+            const {data: {data},} = await axios.get("http://localhost:8080/category");
+           
              setCategories(data);
              setLoading(false)
-             
+         
+
         } catch (error) {
           console.log(error);
           setLoading(false)   
         }
     })()
     }, [])
+
+    const FilterByCategory = getFilterByCategory(categories, category);
+    const filterBySearch = getSearchedResults(FilterByCategory, search)
   return (
-    <div>
+    <div className='home-container'>
         <Navbar route="home"/>
-        <main className="category-card">
+       <div className='sidebar-category-card d-flex'>
+        
+        <SideBar/>
+        
+       <main className="main d-flex wrap gap-md align-center justify-center category-card">
+     
             {
                loading ? (
                 <h1 className='loading'>Loading... this can take upto 1 minute when rendering 1st time</h1>
                ): (
-               categories.map((category)=> {
+                filterBySearch.map((category)=> {
                     return(
                         <QuizCard quizCategory={category} key={category.id}/>
                     )
@@ -39,6 +55,12 @@ const Home = () => {
             }
         
         </main>
+       </div>
+  
+
+        <div>
+          hiiiiii
+        </div>
     </div>
   )
 }
