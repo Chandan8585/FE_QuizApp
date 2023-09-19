@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const QnA = ({quizData}) => {
     const navigate = useNavigate();
     const [ currentQuiz] = quizData;
-    const {title , quiz} = currentQuiz;
+    const {title , quiz} = currentQuiz; 
     const {index, score, quizDispatch, selectedOption} = useQuiz()
 
     const handleNextQuestionClick = ()=> {

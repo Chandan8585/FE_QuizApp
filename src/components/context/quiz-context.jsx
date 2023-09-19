@@ -6,7 +6,8 @@ const initialState = {
     score: 0,
     quizCategory: "",
     selectedOption: "",
-    quiz: []
+    quiz: [],
+  
 }
 
 const QuizContext = createContext();
@@ -18,7 +19,7 @@ const QuizProvider = ({children}) => {
     useEffect(() => {
         const currentIndex = Number(localStorage.getItem("index"));
         const currentScore = Number(localStorage.getItem("score"));
-        const currentOption = localStorage.getItem("option");
+        const currentOption = localStorage.getItem("selectedOption");
         const currentCategory = localStorage.getItem("category");
         const currentQuiz = JSON.parse(localStorage.getItem("quiz"));
         localStorage.setItem("quiz", JSON.stringify(currentQuiz))

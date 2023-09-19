@@ -5,10 +5,21 @@
 
 .quiz-card{
     object-fit: contain;
-    height: 70vh;
+    height: 80vh;
+    object-fit: contain;
     
 }
+
 .card-image-container{
-    height: 40%;
+    height: 60vh;
     border: 2px solid grey;
+    object-fit: contain;
+}
+.card-image-container img{
+    object-fit: contain;
+}
+.card-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

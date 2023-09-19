@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import Navbar from '../../components/Navbar'
-import Login from '../../components/auth/Login'
+import Navbar from '../../../components/Navbar'
+import Login from '../../../components/auth/Login'
 
 const LoginPage = () => {
   return (

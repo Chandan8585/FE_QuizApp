@@ -39,6 +39,10 @@ export const quizReducer = (state, { type, payload }) => {
                 score: 0,
                 selectedOption: null
             }
+        case "SET_QUIZCATEGORY": return {
+              ...state,
+              lectureCategory: payload
+        }
         case "SET_SELECTED_OPTION":
             return {
                 ...state,

@@ -1,0 +1,21 @@
+.search-box{
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 30vw;
+    position: relative;
+    font-size: 1rem;
+}
+.search-box::placeholder {
+    color: white;
+    
+}
+.search-icon{
+  
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    right: 27rem;
+    font-size: 2rem;
+}

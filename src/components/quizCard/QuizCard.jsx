@@ -2,11 +2,12 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./QuizCard.css"
 import { useQuiz } from '../context/quiz-context';
+
 const QuizCard = ({quizCategory}) => {
-    
+  const {quizDispatch} = useQuiz();
         const { image, title, description, category } = quizCategory ;
         const token = localStorage.getItem("token");
-        const {quizDispatch} = useQuiz();
+       
         const navigate = useNavigate();
 
         const handlePlayNowClick = ()=>{
@@ -16,9 +17,9 @@ const QuizCard = ({quizCategory}) => {
                 payload: category
             })
             localStorage.setItem("category", category);
-            // navigate("/");
+            navigate("/");
             
-            navigate("/user-dashboard");
+            
           }else{
             navigate("/auth/login")
           }
@@ -33,7 +34,7 @@ const QuizCard = ({quizCategory}) => {
                 <h1>{category}</h1>
                 <div className="card-title">{title}</div>
                 <div className="card-description">
-                  <p className="card-des">{description}</p>
+                  <p className="card-des">{description.slice(0, 70).concat('...')}</p>
                 </div>
                 <div className="cta-btn" onClick={handlePlayNowClick}>
                   <button className="button play-btn btn-icon cart-btn d-flex align-center justify-center gap cursor btn-margin">

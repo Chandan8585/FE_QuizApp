@@ -2,7 +2,6 @@ import React, { Fragment, useEffect, useState } from 'react'
 import axios from "axios"
 import Navbar from '../../components/Navbar'
 import QnA from '../../components/questionsAndOptions/QnA'
-
 import { useQuiz } from '../../components/context/quiz-context'
 
 const QuizPage = () => {
@@ -11,14 +10,14 @@ console.log(quizCategory);
     useEffect(() => {
         (async () => {
             try {
-                const { data: { data }, } = await axios.get("https://fair-pink-angler-cape.cyclic.app/quiz"
+                const { data: { data }, } = await axios.get("http://localhost:8080/quiz"
                 ,{
                     headers: {authorization : localStorage.getItem("token")}
                 });
                 console.log("from quiz");
                 console.log(data);
                 const filteredData =data && data.length>0 && data.filter(({category})=> category === quizCategory);
-                console.log(filteredData);
+               
                 if(filteredData && filteredData.length>0){
                     quizDispatch({
                         type: "SET_QUIZ",
@@ -26,9 +25,7 @@ console.log(quizCategory);
                     });
                     localStorage.setItem("quiz", JSON.stringify(filteredData));
                 }
-
-                
-            }
+}
              catch (error) {
                 console.log(error);
             }

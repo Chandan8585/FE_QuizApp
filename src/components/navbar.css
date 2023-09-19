@@ -1,3 +1,11 @@
 .head-navbar{
     background-color: blue;
 }
+
+.search-bar-container{
+ 
+    align-items: flex-end;
+    width: 55vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
