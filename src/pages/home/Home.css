@@ -20,13 +20,18 @@
     justify-content: space-around;    
     margin-bottom: 5rem;
 }
-
+.nav-home{
+    background-color: var(--accent-color) ;
+    color: white;
+}
 .sidebar-category-card{
     display: flex;
     justify-content: space-between;
 } 
 
-
+.main{
+    background-color: var(--bg-color);
+}
 
 
 

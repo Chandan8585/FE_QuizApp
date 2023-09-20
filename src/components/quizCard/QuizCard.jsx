@@ -4,11 +4,12 @@ import "./QuizCard.css"
 import { useQuiz } from '../context/quiz-context';
 
 const QuizCard = ({quizCategory}) => {
+  const navigate = useNavigate();
   const {quizDispatch} = useQuiz();
         const { image, title, description, category } = quizCategory ;
         const token = localStorage.getItem("token");
        
-        const navigate = useNavigate();
+      
 
         const handlePlayNowClick = ()=>{
           if(token){
@@ -17,7 +18,7 @@ const QuizCard = ({quizCategory}) => {
                 payload: category
             })
             localStorage.setItem("category", category);
-            navigate("/");
+            navigate("/quiz");
             
             
           }else{

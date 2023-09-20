@@ -1,30 +1,27 @@
-import { createContext, useContext, useReducer, useEffect } from "react";
-import authReducer from "../reducer/authReducer";
+import { createContext, useContext, useReducer } from "react"
+import {authReducer} from "../reducer/authReducer"
 
 const initialState = {
-    userName : "",
-    password : "",
-    token: "",
-    emailID:"",
-    mobile:"", 
+
+    name: "",
+    mobile: "",
+    password:"",
+    email: "",
+    confirmPassword:"",
+    accessToken:"",
+    userName:"",
 }
 
-const AuthContext = createContext();
-const AuthProvider = ({children})=> {
-    useEffect(() => {
-        const token = localStorage.getItem("token");
-        authDispatch({
-            type: "INITIAL_STATE",
-            payload: token
-        })
-    }, [])
-    const [{userName,mobile, emailID, password, token}, authDispatch] = useReducer(authReducer, initialState);
-    return(
-<AuthContext.Provider value={{userName,mobile, emailID, password, token, authDispatch}}>
-     {children}
-</AuthContext.Provider>
-)}
+const AuthContext = createContext(initialState);
 
-const useAuth = () => useContext(AuthContext);
+const AuthProvider = ({children})=> {
+    const [{accessToken ,userName,selectedTab ,confirmPassword, name, email, password, mobile, isUserModalOpen}, authDispatch] = useReducer( authReducer, initialState);
+    return (
+        <AuthContext.Provider value={{ accessToken ,userName, confirmPassword, selectedTab, name, email, password, mobile, isUserModalOpen, authDispatch}}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+const useAuth = ()=> useContext(AuthContext);
 
 export {useAuth, AuthProvider}

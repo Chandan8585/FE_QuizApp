@@ -1,24 +1,47 @@
-const authReducer = (state, {type, payload}) => {
+export const authReducer = (state, {type, payload})=> {
     switch(type){
-        case "USERNAME":
-            return {
-                ...state,
-                userName: payload
-            }
-        case "PASSWORD":
-            return {
-                ...state,
-                password: payload
-            }
-        case "CLEAR_CREDENTIALS":
-            return{
-                ...state,
-            }
-        default:
-        return state
-        
+      case "NAME": return {
+        ...state,
+        name: payload
+      }
+   
+     case "MOBILE": return {
+        ...state,
+        mobile: payload
+      }
+     case "EMAIL": return {
+        ...state,
+        email: payload
+      }
+     case "PASSWORD": return {
+        ...state,
+        password: payload
+      }
+     case "CONFIRM_PASSWORD": return {
+        ...state,
+        confirmPassword: payload
+      }
+     
+      case "CLEAR_USER_DATA": return {
+        ...state,
+        name: "",
+        mobile: "",
+        password:"",
+        email: "",
+        confirmPassword:"",
+      }
+    //   case "SET_ACCESS_TOKEN": return {
+    //     ...state,
+    //     accessToken: payload
+    //   }
+    //   case "SET_USERNAME": return{
+    //     ...state,
+    //     userName: payload
+    //   }
+    //   case "User_Modal_Open": return{
+    //     ...state,
+    //     isUserModalOpen : !state.isUserModalOpen 
+    //   }
+      default: return state
     }
- 
 }
-
-export default authReducer
