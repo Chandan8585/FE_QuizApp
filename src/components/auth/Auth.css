@@ -6,19 +6,24 @@
      height: fit-content;
      position: relative;
      bottom: 1rem;
+     color: white;
+    
 }
 
 .login-auth {
-  width: 33rem;
-  background-color: var(--primary-color);
-  color: var(--text-color-primary);
+  width: 45vw;
+  height: 80vh;
+  background-color: var(--accent-color);
+  color: white;
   padding: 1rem 2rem;
-  border-radius: 4px;
+  margin: 5rem 2rem;
+  border-radius: 5px;
 }
 
 .auth-title {
   margin: 1rem 0;
   text-align: center;
+  font-size: 2.5rem;
 }
 
 
@@ -27,30 +32,31 @@
   height: 2.5rem;
   margin: 4px 0;
   font-size: 1rem;
-  border: 1px solid var(--primary-color);
+  
   border-radius: 4px;
-  color: black;
-  border: 2px solid red;
+ 
 }
 
-.form-input:focus {
-  outline: 1px solid var(--primary-color);;
+.form-input-log:focus {
+  outline: 2px solid var(--primary-color);;
 }
   
 .form-label {
   padding: 0;
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .form-container {
   margin: 1rem 0;
-  color: black;
+  color: white;
 }
 
 .label-remember {
   font-size: 1rem;
-  color: var(--text-color-primary);
+  /* color: var(--text-color-primary); */
+  
 }
 
 .forgot-pass {
@@ -66,10 +72,20 @@
 
 .login-btn {
   width: 100%;
-  background-color: var(--bg-color);
-  color: var(--text-color-primary);
+  height: 3rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: 900;
+  font-size: 1.5rem;                      ;
 }
-
+.sign-up-here{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.sign-up-here span{
+    color: var(--primary-color);
+}
 .padding-small {
   padding: .5rem 0;
 }
@@ -126,7 +142,7 @@
 }
 
 .btn-outline-primary {
-  color: var(--text-color-primary);
+  color: white;
   background-color: transparent;
   border: 1px solid var(--bg-color);
   cursor: pointer;

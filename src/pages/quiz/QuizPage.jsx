@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect} from 'react'
 import axios from "axios"
 import Navbar from '../../components/Navbar'
 import QnA from '../../components/questionsAndOptions/QnA'
@@ -6,16 +6,16 @@ import { useQuiz } from '../../components/context/quiz-context'
 
 const QuizPage = () => {
     const { quizCategory, quiz , quizDispatch } = useQuiz();
-console.log(quizCategory);
+
     useEffect(() => {
-        (async () => {
+        ( async() => {
             try {
-                const { data: { data }, } = await axios.get("http://localhost:8080/quiz"
+                const { data} = await axios.get("https://wicked-plum-sea-urchin.cyclic.cloud/quiz"
                 ,{
-                    headers: {authorization : localStorage.getItem("token")}
+                    headers: {authorization : localStorage.getItem("token")},
                 });
                 console.log("from quiz");
-                console.log(data);
+                console.log("data",data);
                 const filteredData =data && data.length>0 && data.filter(({category})=> category === quizCategory);
                
                 if(filteredData && filteredData.length>0){
@@ -35,7 +35,7 @@ console.log(quizCategory);
     return (    
 
             <Fragment>
-            <Navbar />
+            <Navbar route="quiz"/>
             { quiz && quiz.length > 0 && <QnA quizData={quiz} />
             }
             </Fragment>  

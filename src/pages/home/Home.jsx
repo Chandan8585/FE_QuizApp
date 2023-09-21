@@ -16,7 +16,7 @@ const Home = () => {
     (async ()=> {
         try {
           
-            const {data: {data},} = await axios.get("http://localhost:8080/category");
+            const {data: {data},} = await axios.get("https://wicked-plum-sea-urchin.cyclic.cloud/category");
            
              setCategories(data);
              setLoading(false)
@@ -33,7 +33,10 @@ const Home = () => {
     const filterBySearch = getSearchedResults(FilterByCategory, search)
   return (
     <div className='home-container'>
-        <Navbar route="home"/>
+      <div className='nav-home'>
+      <Navbar route="home"/>
+      </div>
+        
        <div className='sidebar-category-card d-flex'>
         
         <SideBar/>
@@ -59,7 +62,7 @@ const Home = () => {
   
 
         <div>
-          hiiiiii
+          Footer
         </div>
     </div>
   )

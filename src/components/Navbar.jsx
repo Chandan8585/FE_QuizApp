@@ -24,16 +24,18 @@ const Navbar = ({route}) => {
             type: "QUIT"
         })
     }
-    
+    const userName = localStorage.getItem("userName");
     return (
         <header className="heading head-navbar d-flex grow-shrink-basis align-center">
             <div className="heading-title-icon d-flex grow-shrink-basis align-center">
-                <img className="icon mr-1" src="../src/assets/logo.png" alt="logo" />
-                <h1 className="heading-title">
+                {/* <img className="icon mr-1" src="../src/assets/logo.png" alt="logo" /> */}
+                <h1 className="logo-name">Quizonik</h1>
+                {/* <h1 className="heading-title">
                     {
-                        route === "home" || route === "login" ? (<Link to="/" className="link">EduNest</Link>) : "Quizify"
+                        route === "home" || route === "login" ? (<Link to="/" className="link">EduNest</Link>) : ""
                     }
-                </h1>
+                </h1> */}
+             
             </div>
             <nav className="navigation">
                 <ul className="list-non-bullet">
@@ -43,7 +45,7 @@ const Navbar = ({route}) => {
                             
                             <li className="list-item-inline">
                               
-                                <Link to="/auth/login" className="link cursor" onClick={handleAuthClick}> {token ? "Logout": "Login"} </Link>
+                                <Link to="/auth/login" className="link cursor" onClick={handleAuthClick}> {token ? `hi ${userName} Logout` : "Login"} </Link>
                             </li>
                         )
                     }

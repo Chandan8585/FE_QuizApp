@@ -1,5 +1,10 @@
-.head-navbar{
-    background-color: blue;
+.heading{
+    /* background-color: var(--accent-color); */
+    
+
+}
+.logo-name{
+    color: white;
 }
 
 .search-bar-container{

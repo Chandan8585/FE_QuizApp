@@ -17,7 +17,7 @@ const SearchBar = () => {
             placeholder="Search"
             onChange={(e) => handleInput(e)}
           />
-           <span class="material-icons-outlined search-icon absolute">
+           <span className="material-icons-outlined search-icon absolute">
             search
             </span>
     </div>

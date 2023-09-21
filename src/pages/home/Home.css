@@ -10,23 +10,26 @@
     flex: 2;
     display: flex;
     padding: 4rem 2rem 2rem 2rem;
-    
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    
     row-gap: 1rem;
     margin-top: 2rem;
     flex: wrap;
     justify-content: space-around;    
     margin-bottom: 5rem;
 }
-
+.nav-home{
+    background-color: var(--accent-color) ;
+    color: white;
+}
 .sidebar-category-card{
     display: flex;
     justify-content: space-between;
 } 
 
-
+.main{
+    background-color: var(--bg-color);
+}
 
 
 
@@ -34,15 +37,19 @@
 
 /* Sidebar container */
 .side-bar {
+    
    z-index: 4;
-    background-color: #fff; 
+    background-color: var(--bg-color); 
     height: fit-content;
     width:20rem; 
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    padding: 20px 20px 0 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
   }
   
-  /* Sidebar headers */
+ label{
+    font-size: 1.2rem;
+ }
   .headers{
     display: flex;
     flex-direction: row;
@@ -51,39 +58,26 @@
     margin-bottom: 10px;
   }
   
-  /* Clear button */
+  
   .clear-btn {
-    color: #007bff; /* Link color for the clear button */
+    color: white; 
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 14px;
+    
   }
-  .category-options{
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
-  /* Category options */
-  .category-options h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  /* Category option label */
-  .option{
-    font-size: 14px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    padding: 0 20%;
-  }
-  
-  /* Category option radio input */
+
   .option input[type="radio"] {
-    /* margin-right: 5px; */
-    /* cursor: pointer;
-    height: 1rem;
-    width: 1rem;  */
-    flex: 0 0 auto
+
+    flex: 0 0 auto;
+  
   }
- 
+  .filter{
+    font-size: 3rem;
+    color: var(--primary-color);
+  }
+  
+  .category{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+ }

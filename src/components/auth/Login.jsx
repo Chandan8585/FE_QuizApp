@@ -1,16 +1,17 @@
 import React from 'react'
 import "./Auth.css"
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LoginHandler } from '../services/authService';
 import { useAuth } from '../context/authContext';
 
+
 const Login = () => {
-    const navigate = useNavigate();
-    const { userName, password, authDispatch } = useAuth();
-    console.log("username",userName, password, authDispatch );
+    const navigate = useNavigate();  
+    const { email, password, authDispatch } = useAuth();
+    console.log("username",email, password, authDispatch );
  const handleLoginClick= (event)=> {
           event.preventDefault();
-          const token = LoginHandler(userName, password);
+          const token = LoginHandler(email, password);
           console.log("token", token);
           if(token){
             navigate("/")
@@ -23,9 +24,9 @@ const Login = () => {
             type: "CLEAR_CREDENTIALS"
           })
  }
- const handleUserNameChange = (event)=> {
+ const handleEmailChange = (event)=> {
          authDispatch({
-            type: "USERNAME",
+            type: "EMAIL",
             payload: event.target.value
          })
  }
@@ -36,7 +37,7 @@ const Login = () => {
          })
  }
  const handleTestCredentialsClick = ()=> {
-      const token = LoginHandler("Chandan", "Password");
+      const token = LoginHandler("pratapchandan207@gmail.com", "Abcd@123");
       authDispatch({
         type: "TOKEN",
         payload: token
@@ -53,11 +54,11 @@ const Login = () => {
         onSubmit={handleLoginClick}
         >
             <div className="form-container">
-                <label className="form-label">Username</label>
+                <label className="form-label">Email ID</label>
                 <input 
-                value={userName} 
+                value={email} 
                 className="form-input-log lh-ls" placeholder="Chandan_Pratap8585" 
-                onChange={handleUserNameChange}
+                onChange={handleEmailChange}
                 />
             </div>
             <div className="form-container">
@@ -69,15 +70,18 @@ const Login = () => {
                 />
             </div>
             <div className="cta">
-                <button className="button login-btn btn-margin cursor sign-up-btn">Login</button>
+                <button className="button login-btn btn-margin cursor">Login</button>
             </div>
         </form>
         <div>
-            <button className="button login-btn btn-outline-primary btn-margin sign-up-btn" 
+            <button className="test button login-btn btn-outline-primary btn-margin sign-up-btn" 
             onClick={handleTestCredentialsClick}
             >
                 Login with Test Credentials
             </button>
+        </div>
+        <div className='sign-up-here'>
+          <p>Don't have an account <Link to="/auth/signup"><span className='span'>Sign Up</span></Link> here</p>
         </div>
     </div>
 </div>
