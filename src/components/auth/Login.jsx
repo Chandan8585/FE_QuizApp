@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Auth.css"
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LoginHandler } from '../services/authService';
 import { useAuth } from '../context/authContext';
 
@@ -70,15 +70,18 @@ const Login = () => {
                 />
             </div>
             <div className="cta">
-                <button className="button login-btn btn-margin cursor sign-up-btn">Login</button>
+                <button className="button login-btn btn-margin cursor">Login</button>
             </div>
         </form>
         <div>
-            <button className="button login-btn btn-outline-primary btn-margin sign-up-btn" 
+            <button className="test button login-btn btn-outline-primary btn-margin sign-up-btn" 
             onClick={handleTestCredentialsClick}
             >
                 Login with Test Credentials
             </button>
+        </div>
+        <div className='sign-up-here'>
+          <p>Don't have an account <Link to="/auth/signup"><span className='span'>Sign Up</span></Link> here</p>
         </div>
     </div>
 </div>

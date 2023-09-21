@@ -18,10 +18,10 @@ const {category, filterDispatch} = useFilter();
   return (
     <div className='side-bar'>
      <div className="headers">
-        <h3>Filter</h3>
+        <h3 className='filter'>Filter</h3>
         <p className='clear-btn' onClick={handleClear}>Clear</p>
      </div>
-     <h3>Category</h3>
+     <h3 className='category'>Category</h3>
      <div className="category-options">
      <div className='option'>
      <label>

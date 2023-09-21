@@ -13,10 +13,12 @@ export const LoginHandler = async (email, password) => {
         });
         // console.log("response", response.data.accessToken);
         const token = response.data.accessToken;  
+        const userName = response.data.userName;
         // console.log("token",token)      ;
         if(response.status === 200){
             // console.log(token)
             localStorage.setItem("token", token);
+            localStorage.setItem("userName", userName);
             return token;  
         }
     } catch (error) {

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import "./signUp.css"
 import axios from 'axios';
-import { useAuth } from '../context/authContext';
+
+import { Link } from 'react-router-dom';
 
 
 const initialValues = {
@@ -51,7 +52,7 @@ const Signup = () => {
  }
   return (
     <div className="container">
-    <div className="login-auth d-flex direction-column justify-center">
+    {/* <div className="login-auth d-flex direction-column justify-center"> */}
         <h2 className="auth-title">Sign Up</h2>
 <Formik 
     initialValues = {initialValues}
@@ -61,7 +62,7 @@ const Signup = () => {
    >
     <Form >
         <div className='form-container'>
-            <label htmlFor='userName' className="form-label">First Name</label>
+            <label htmlFor='userName' className="form-label">Your Name</label>
             <Field type="text" className="form-input-log" name='userName' placeholder= "Enter your First Name"/> 
             <ErrorMessage name='userName' component='div' className='error-message'/>
         </div>
@@ -90,15 +91,16 @@ const Signup = () => {
 
         </div>
         <div className='submit-btn'>
-      <button type="submit">Sign Up</button>
-       <button>All Ready Have a Login ID</button>
+      <button type="submit" className='btn-margin cursor signup-btn'>Sign Up</button>
        {serverError && <div className='server-error'>{serverError}</div>}
-
+    </div>
+    <div className='login-here'> 
+          <p>Already have an account <Link to="/auth/login"><span className='span'>Login</span></Link> here</p>
     </div>
     </Form>
 </Formik>
 
-</div>
+{/* </div> */}
   </div>
   )
  }

@@ -1,6 +1,10 @@
 .heading{
-    background-color: white;
+    /* background-color: var(--accent-color); */
     
+
+}
+.logo-name{
+    color: white;
 }
 
 .search-bar-container{
