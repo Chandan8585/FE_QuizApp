@@ -71,5 +71,6 @@ To get started with this project on your local machine, follow these simple step
 # Demo
 ## Screenshot
 
-![App Screenshot](./public/vite.svgi)
+![App Screenshot](./src/assets/logo.jpg)
+
 
