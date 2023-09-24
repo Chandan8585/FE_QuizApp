@@ -79,11 +79,6 @@ To get started with this project on your local machine, follow these simple step
 
 
 # Video Demo
-<a href="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4">
-  <img src="./src/assets/Screenshot (60).png" alt="Video Thumbnail" width="480" height="270">
-</a>
+<video src="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4" controls="controls" alt="video"></video>
 
-[![Video Thumbnail](./src/assets/Screenshot%20(58).png)](./src/assets/Screen_recording-2023-09-24_19-10-31.mp4)
-
-<video src="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4" control={control} alt="video" />
 
