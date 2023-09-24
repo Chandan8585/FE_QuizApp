@@ -70,7 +70,20 @@ To get started with this project on your local machine, follow these simple step
 
 # Demo
 ## Screenshot
+![App Screenshot](./src/assets/Screenshot%20(58).png)
+![App Screenshot](./src/assets/Screenshot%20(59).png)
+![App Screenshot](./src/assets/HomePage.png)
+![App Screenshot](./src/assets/Screenshot%20(60).png)
+![App Screenshot](./src/assets/Screenshot%20(61).png)
 
-![App Screenshot](./src/assets/logo.jpg)
 
+
+# Video Demo
+<a href="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4">
+  <img src="./src/assets/Screenshot (60).png" alt="Video Thumbnail" width="480" height="270">
+</a>
+
+[![Video Thumbnail](./src/assets/Screenshot%20(58).png)](./src/assets/Screen_recording-2023-09-24_19-10-31.mp4)
+
+<video src="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4" control={control} alt="video"><video>
 
