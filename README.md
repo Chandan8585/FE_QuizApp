@@ -81,4 +81,3 @@ To get started with this project on your local machine, follow these simple step
 # Video Demo
 <video src="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4" controls="controls" alt="video"></video>
 
-
