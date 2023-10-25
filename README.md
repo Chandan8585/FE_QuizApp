@@ -1,5 +1,6 @@
 
 # Quizonik
+![App Screenshot](./src/assets/logo.png)
 
 Quizonik is a quiz app with multiple choice questions from various
 categories such as frontend, javascript, backend etc. Whether you're a trivia enthusiast or just looking to challenge yourself, Quizonik has got you covered.
@@ -85,4 +86,4 @@ To get started with this project on your local machine, follow these simple step
 
 # Video Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eTxf5HJsS38?si=UTRwX-p9fRSsy88-&amp;start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eTxf5HJsS38?si=UTRwX-p9fRSsy88-&amp;start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
