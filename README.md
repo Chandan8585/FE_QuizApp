@@ -70,14 +70,20 @@ To get started with this project on your local machine, follow these simple step
 
 # Demo
 ## Screenshot
+### Login Page
 ![App Screenshot](./src/assets/Screenshot%20(58).png)
+### Sign up Page
 ![App Screenshot](./src/assets/Screenshot%20(59).png)
+### Home Page
 ![App Screenshot](./src/assets/HomePage.png)
+### Quiz page
 ![App Screenshot](./src/assets/Screenshot%20(60).png)
+### Result Page
 ![App Screenshot](./src/assets/Screenshot%20(61).png)
 
 
 
 # Video Demo
-<video src="./src/assets/Screen_recording-2023-09-24_19-10-31.mp4" controls="controls" alt="video"></video>
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eTxf5HJsS38?si=UTRwX-p9fRSsy88-&amp;start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
